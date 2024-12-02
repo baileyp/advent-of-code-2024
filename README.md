@@ -18,7 +18,9 @@ ruby bin/run.rb
 
 ## Goals
 
-TBD
+- I am very busy this year so my primary goal is to just finish as many puzzles as possible.
+- I will look for opportunities to re-use code between puzzles.
+- I will look for opportunities to use Ruby features in interesting ways.
 
 ---
 ## Notes
