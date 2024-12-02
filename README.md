@@ -24,3 +24,4 @@ ruby bin/run.rb
 
 ---
 ## Notes
+- [Day 1](./notes/day1.md)
