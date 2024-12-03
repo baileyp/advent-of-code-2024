@@ -1,9 +1,9 @@
 # Day 1
 
 [Puzzle ↗️](https://adventofcode.com/2024/day/1) |
-[Solution](../lib/day1.rb) |
-[Spec](../spec/day1_spec.rb) |
-[Input](../input/day1.txt)
+[Solution](../lib/day01.rb) |
+[Spec](../spec/day01_spec.rb) |
+[Input](../input/day01.txt)
 
 ## Part 1
 
