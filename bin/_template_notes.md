@@ -1,6 +1,6 @@
 # Day XX
 
-[Puzzle ↗️](https://adventofcode.com/2024/day/XX) |
+[Puzzle ↗️](https://adventofcode.com/2024/day/X) |
 [Solution](../lib/dayXX.rb) |
 [Spec](../spec/dayXX_spec.rb) |
 [Input](../input/dayXX.txt)

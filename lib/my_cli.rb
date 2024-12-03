@@ -17,15 +17,15 @@ class MyCli
 
     copy_and_replace_template('bin/_template_day.rb', "lib/day#{day_str}.rb", day_str)
     copy_and_replace_template('bin/_template_spec.rb', "spec/day#{day_str}_spec.rb", day_str)
-    copy_and_replace_template('bin/_template_notes.md', "notes/day#{day}.md", day.to_s)
+    copy_and_replace_template('bin/_template_notes.md', "notes/day#{day_str}.md", day_str)
     File.open("input/day#{day_str}.txt", 'w') { |file| file.puts "" }
 
     # Append a line to README.md
     open('README.md', 'a') do |f|
-      f.puts "- [Day #{day}](./notes/day#{day}.md)\n"
+      f.puts "- [Day #{day}](./notes/day#{day_str}.md)\n"
     end
 
-    system("cursor lib/day#{day_str}.rb spec/day#{day_str}_spec.rb notes/day#{day}.md input/day#{day_str}.txt")
+    system("cursor lib/day#{day_str}.rb spec/day#{day_str}_spec.rb notes/day#{day_str}.md input/day#{day_str}.txt")
   end
 
   def self.copy_and_replace_template(template_file, destination_file, day_str)
@@ -34,7 +34,7 @@ class MyCli
 
     # Replace all instances of 'XX' with the day number
     text = File.read(destination_file)
-    new_text = text.gsub('XX', day_str)
+    new_text = text.gsub(/\bX\b/m, day_str.sub(/^0/, '')).gsub('XX', day_str)
     File.open(destination_file, 'w') { |file| file.puts new_text }
   end
 end
